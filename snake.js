@@ -38,18 +38,18 @@ function tick(){
 
     if (food && food.x === snakePart.x && food.y === snakePart.y) {
         food = null;
-        snakeLength +=10;
+        snakeLength +=1;
         score++;
     }
 
     ctx.fillStyle = '#627758'; //#22424a
     ctx.fillRect (0,0,SIZE,SIZE);
     if (end){
-        ctx.fillStyle = '#e8dbb0';
+        ctx.fillStyle = '#262D22';
         ctx.font = '30px Monospace';
         ctx.textAlign = 'center';
-        ctx.fillText('Game Over - Score: ' + score, SIZE / 2, SIZE / 2);
-        ctx.fillText('SPACE to continue', SIZE / 2, 300);
+        ctx.fillText('Nice try! Score: ' + score, SIZE / 2, SIZE / 2);
+        ctx.fillText('Enter to try again', SIZE / 2, 300);
         if (newDirection == 5) {
             location.reload();
         }
@@ -87,6 +87,6 @@ function tick(){
 window.onload = function(){
     setInterval(tick, 100);
     window.onkeydown = function(e){
-        newDirection = {37: -1, 38: -2, 39: 1, 40: 2, 32: 5}[e.keyCode] || newDirection;
+        newDirection = {37: -1, 38: -2, 39: 1, 40: 2, 13: 5}[e.keyCode] || newDirection;
     };
 };
