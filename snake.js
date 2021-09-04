@@ -56,7 +56,7 @@ function tick(){
     } else {
         snake.unshift(snakePart);
         snake = snake.slice(0, snakeLength);
-        ctx.fillStyle = '#e8dbb0';
+        ctx.fillStyle = '#262D22';
         ctx.font = '20px Monospace';
         ctx.fillText('Score: ' + score, 5, 20);
     }
