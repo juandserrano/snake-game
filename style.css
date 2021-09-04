@@ -1,0 +1,17 @@
+div {
+    display: flex;
+    position: relative;
+    height: 100vh;
+}
+
+img {
+    position: absolute;
+    height: 100%;
+    margin: 0 auto;
+}
+canvas {
+    position: absolute;
+    top: 26.5%;
+    left: 100px;
+    border-radius: 20px;
+}
